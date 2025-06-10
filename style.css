@@ -1,0 +1,508 @@
+/* Paleta de Cores Deep Teal Sea */
+:root {
+    --deep-teal-1: #012E40; /* Quase preto, tom de azul bem escuro */
+    --deep-teal-2: #024959; /* Azul escuro */
+    --deep-teal-3: #026773; /* Teal médio */
+    --deep-teal-4: #3CA6A6; /* Teal claro */
+    --deep-teal-5: #F2E3D5; /* Creme/Beige claro */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--deep-teal-5); /* Fundo geral mais claro */
+    color: var(--deep-teal-1); /* Cor de texto padrão */
+}
+
+/* --- Cabeçalho Principal --- */
+.cabecalho {
+    color: var(--deep-teal-5); /* Texto branco cremoso */
+    background-color: var(--deep-teal-1); /* Fundo preto azulado */
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho h1 {
+    font-size: 3.5rem; /* Título maior */
+    margin-bottom: 10px;
+    color: var(--deep-teal-4); /* Destaque em teal claro */
+    letter-spacing: 2px;
+}
+
+.cabecalho h3 {
+    font-size: 1.8rem;
+    color: var(--deep-teal-5); /* Subtítulo em branco cremoso */
+    font-weight: normal;
+}
+
+/* --- Navbar (Menu de Navegação) --- */
+.navbar {
+    background-color: var(--deep-teal-2) !important; /* Fundo do navbar em azul escuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    color: var(--deep-teal-5) !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: var(--deep-teal-4) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%233CA6A6' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: var(--deep-teal-5) !important; /* Cor do texto dos links */
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    position: relative; /* Necessário para a animação do sublinhado */
+    overflow: hidden; /* Garante que o sublinhado comece fora */
+    transition: color 0.3s ease; /* Transição suave para a cor do texto */
+}
+
+.navbar-nav .nav-item .nav-link i {
+    margin-right: 10px;
+    color: var(--deep-teal-4); /* Cor dos ícones */
+    transition: color 0.3s ease;
+}
+
+/* Animação do sublinhado */
+.navbar-nav .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Espessura do sublinhado */
+    background-color: var(--deep-teal-4); /* Cor do sublinhado */
+    transform: translateX(-100%); /* Começa fora da vista */
+    transition: transform 0.3s ease-out; /* Animação suave */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--deep-teal-5) !important; /* Mantém a cor do texto ao passar o mouse */
+    background-color: var(--deep-teal-3); /* Fundo mais escuro ao passar o mouse */
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    transform: translateX(0); /* Desliza o sublinhado para dentro */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    background-color: var(--deep-teal-3); /* Fundo do link ativo */
+    color: var(--deep-teal-5) !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link.active i {
+    color: var(--deep-teal-5); /* Ícone branco para link ativo */
+}
+
+/* --- Conteúdo Principal --- */
+.main-content-wrapper {
+    display: flex;
+}
+
+/* --- Sidebar Lateral (não usada neste layout, mas mantida para referência) --- */
+.sidebar {
+    width: 250px;
+    background-color: var(--deep-teal-2);
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* --- Estilos de Seção de Conteúdo --- */
+.content-section {
+    padding: 40px 0;
+}
+
+.text-deep-teal-1 {
+    color: var(--deep-teal-1);
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: var(--deep-teal-2); /* Aplica a cor do tema */
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.content h3.display-5 { /* Para os títulos principais das seções */
+    font-size: 2.8rem;
+    color: var(--deep-teal-2); /* Aplica a cor do tema */
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--deep-teal-1); /* Cor de texto padrão */
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.img-content { /* Usando essa classe para a imagem da introdução */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para a imagem */
+}
+
+/* --- Estilos para Cartões (custom-card) --- */
+.card { /* O estilo dos cards será aplicado diretamente pela classe 'card' do Bootstrap */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: white; /* Alterado para branco */
+    margin-bottom: 20px; /* Adiciona espaço entre os cards empilhados */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--deep-teal-2);
+}
+
+.card-text {
+    color: var(--deep-teal-1);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Botões Personalizados (mantidos) --- */
+.btn-primary-custom {
+    background-color: var(--deep-teal-3);
+    border-color: var(--deep-teal-3);
+    color: var(--deep-teal-5);
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--deep-teal-2);
+    border-color: var(--deep-teal-2);
+    color: var(--deep-teal-5);
+}
+
+.btn-secondary-custom {
+    background-color: var(--deep-teal-4);
+    border-color: var(--deep-teal-4);
+    color: var(--deep-teal-1);
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    background-color: var(--deep-teal-3);
+    border-color: var(--deep-teal-3);
+    color: var(--deep-teal-5);
+}
+
+.btn-outline-info-custom {
+    border: 2px solid var(--deep-teal-3);
+    color: var(--deep-teal-3);
+    background-color: transparent;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-info-custom:hover {
+    background-color: var(--deep-teal-3);
+    color: var(--deep-teal-5);
+    border-color: var(--deep-teal-3);
+}
+
+/* --- Seção Explore Mais (Design Diferente) --- */
+#saiba-mais-rural {
+    background: linear-gradient(135deg, var(--deep-teal-4), var(--deep-teal-3)); /* Degradê para um visual único */
+    color: var(--deep-teal-1); /* Texto escuro para contraste */
+    padding: 60px 30px; /* Mais padding para destaque */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra intensa */
+    text-align: center;
+    position: relative; /* Para possíveis efeitos futuros */
+    overflow: hidden; /* Garante que nada saia das bordas */
+}
+
+#saiba-mais-rural h2 {
+    color: var(--deep-teal-1); /* Título em azul escuro */
+    font-size: 3rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Sombra no texto */
+}
+
+#saiba-mais-rural p {
+    color: var(--deep-teal-1); /* Texto do parágrafo */
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto; /* Centraliza o parágrafo */
+}
+
+.rural-button {
+    background-color: var(--deep-teal-1) !important; /* Botão em azul bem escuro */
+    border-color: var(--deep-teal-1) !important;
+    color: var(--deep-teal-5) !important; /* Texto do botão em creme claro */
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 50px; /* Botão mais arredondado (pill) */
+    transition: all 0.4s ease;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 1px;
+}
+
+.rural-button:hover {
+    background-color: var(--deep-teal-2) !important; /* Fundo do botão ao passar o mouse */
+    border-color: var(--deep-teal-2) !important;
+    transform: translateY(-3px); /* Leve elevação no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+}
+
+
+/* --- Divisores de Seção (mantidos) --- */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--deep-teal-4), rgba(0, 0, 0, 0));
+    margin: 60px 0;
+}
+
+/* --- Lista de Checagem (mantida) --- */
+.list-unstyled li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--deep-teal-1);
+}
+
+.list-unstyled li .fa-check-circle {
+    color: var(--deep-teal-3);
+    margin-right: 10px;
+}
+
+/* --- Rodapé (Design Diferente) --- */
+.footer {
+    background-color: #012E40; /* Fundo em azul muito escuro */
+    color: var(--deep-teal-5); /* Texto em creme claro */
+    text-align: center;
+    padding: 30px; /* Mais padding */
+    font-size: 0.95rem;
+    margin-top: 60px; /* Mais espaço para separar do conteúdo */
+    box-shadow: 0 -5px 15px rgba(43, 0, 255, 0.2); /* Sombra superior sutil */
+    border-top: 5px solid var(--deep-teal-3); /* Linha superior em teal médio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    margin-bottom: 5px;
+    color: var(--deep-teal-5); /* Garante que o texto seja creme */
+}
+
+.footer p small {
+    opacity: 0.8; /* Texto menor com leve transparência */
+}
+
+
+/* --- Mouse Light Effect (se for usado com JS - mantido) --- */
+.mouse-light {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: var(--deep-teal-4);
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(15px);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow-y: visible;
+        padding: 10px 0;
+    }
+
+    .sidebar .nav-item {
+        text-align: center;
+    }
+
+    .sidebar .nav-link {
+        padding: 10px 15px;
+        justify-content: center;
+        border-left: none;
+        font-size: 1rem;
+    }
+
+    .sidebar .nav-link:hover {
+        border-left: none;
+        padding-left: 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .content h2, .content h3.display-5 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #saiba-mais-rural {
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+
+    #saiba-mais-rural h2 {
+        font-size: 2rem;
+    }
+
+    #saiba-mais-rural p {
+        font-size: 1rem;
+    }
+
+    .rural-button {
+        padding: 12px 30px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
+strong {
+    /* Opção 1: Mudar a cor para um tom mais escuro da paleta */
+    color: var(--deep-teal-2); /* Azul escuro */
+    font-weight: bold; /* Garante que continua em negrito */
+}
+    /* Estilos para a seção de comentários */
+        .comments-section {
+            background-color: white; /* Alterado para branco */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments-section h2 {
+            color: var(--deep-teal-1); /* Título em azul escuro */
+            margin-bottom: 30px;
+        }
+
+        .comments-form .form-label {
+            color: var(--deep-teal-2); /* Labels em azul escuro */
+            font-weight: bold;
+        }
+
+        .comments-form .form-control,
+        .comments-form .form-select {
+            border: 1px solid var(--deep-teal-4); /* Bordas em teal claro */
+            padding: 10px;
+            border-radius: 5px;
+            color: var(--deep-teal-1); /* Texto em azul escuro */
+        }
+
+        .comments-form .form-control:focus,
+        .comments-form .form-select:focus {
+            border-color: var(--deep-teal-3); /* Borda teal médio ao focar */
+            box-shadow: 0 0 0 0.25rem rgba(2, 103, 115, 0.25); /* Sombra suave */
+        }
+
+        .comments-form .btn-primary {
+            background-color: var(--deep-teal-3); /* Botão em teal médio */
+            border-color: var(--deep-teal-3);
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .comments-form .btn-primary:hover {
+            background-color: var(--deep-teal-2); /* Teal escuro ao passar o mouse */
+            border-color: var(--deep-teal-2);
+        }
+
+        .comment-list {
+            margin-top: 40px;
+        }
+
+        .comment-item {
+            background-color: white;
+            border: 1px solid var(--deep-teal-4);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .comment-item h5 {
+            color: var(--deep-teal-2);
+            margin-bottom: 5px;
+        }
+
+        .comment-item small {
+            color: #6c757d;
+        }
+
+        .comment-item p {
+            margin-top: 10px;
+            color: var(--deep-teal-1);
+        }
+        /* Animação simples para as cards */
+.card-hover-zoom {
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito */
+}
+
+.card-hover-zoom:hover {
+    transform: scale(1.03); /* Aumenta a card em 3% quando o mouse passa por cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important; /* Aumenta a sombra, use !important se o Bootstrap estiver sobrescrevendo */
+}
